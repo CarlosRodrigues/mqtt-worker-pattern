@@ -1,0 +1,10 @@
+version: '3' 
+services: 
+  mosquitto: 
+    container_name: mosquitto-broker
+    image: eclipse-mosquitto:latest 
+    volumes: 
+      - ./config/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+    ports: 
+      - 1883:1883  
+      - 8883:8883
